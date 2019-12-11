@@ -30,7 +30,7 @@ class Home extends Component{
             if(snapshot && snapshot.exists()){
                 let cardSet=[]
                 snapshot.forEach(item=>{
-                    var temp=<Card title={item.val().title} content={item.val().content} id={item.val().id}></Card>
+                    var temp=<Card title={item.val().title} content={item.val().content} deleteCard={this.deleteCard(item.val().id)} id={item.val().id}></Card>
                     cardSet.push(temp)
                 })
                 this.setState({
@@ -41,6 +41,10 @@ class Home extends Component{
             }
         })
         }
+
+    deleteCard=(id)=>{
+        console.l
+    }
 
     onChangeHandler=(e)=>{
         this.setState({
