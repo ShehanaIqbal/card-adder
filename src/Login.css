@@ -1,0 +1,8 @@
+.loginblock{
+    align-self: center;
+    margin: 100px 300px ;
+    padding: 30px 30px;
+    border: 3px solid black;
+    width:700px;
+    height: 150px;
+}

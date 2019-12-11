@@ -1,0 +1,14 @@
+.homeTitle{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.addForm{
+    margin: 10px 100px;
+}
+
+.addButton{
+    margin: 10px 100px;
+    width:200px;
+    height: 50px;
+}
