@@ -9,6 +9,7 @@
 
 .addButton{
     margin: 10px 100px;
-    width:200px;
+    width:600px;
+    align-items: center;
     height: 50px;
 }

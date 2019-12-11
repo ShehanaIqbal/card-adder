@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Navbar from './Navbar.js';
 import Card from './card.js';
 import './Home.css';
+import { Button } from 'reactstrap';
 //import IdGenerator from 'react-id-generator';
 //import AddButton from './add_button.js';
 import firebase from 'firebase';
@@ -40,15 +41,15 @@ class Home extends Component{
             if(snapshot && snapshot.exists()){
                 let cardSet=[]
                 snapshot.forEach(item=>{
-                    var temp=<Card 
-                        title={item.val().title} 
-                        content={item.val().content} 
-                        deleteCard={()=>{this.deleteThisCard(item.val().id)} }
-                        id={item.val().id}
-                        isDeleted={item.val().isDeleted}>
-                        </Card>
-                    if (item.isDeleted!==true){
-                        cardSet.push(temp)
+                    if (item.val().isDeleted===false){
+                        var temp=<Card 
+                            title={item.val().title} 
+                            content={item.val().content} 
+                            deleteCard={()=>{this.deleteThisCard(item.val().id)} }
+                            id={item.val().id}
+                            isDeleted={item.val().isDeleted}>
+                            </Card>
+                            cardSet.push(temp)
                     }
                 })
                 this.setState({
@@ -100,10 +101,11 @@ class Home extends Component{
                 <br></br>
                 <br></br>
                 <h2 className='homeTitle'>Welcome to the card adder</h2><br></br>
-                <button className='addButton' onClick={this.buttonClicked} >Add new card</button><br></br><br></br>
+                <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button>
                 <div  className='addForm' hidden={this.state.isHidden}>
                     <form onSubmit={this.onSubmitForm}>
                         <input placeholder='title' label='Title' name='title' onChange={this.onChangeHandler} /><br></br><br></br>
+                        <TextField id="outlined-basic" label="Title" variant="outlined" />
                         <input placeholder='content' label='Content' name='content' onChange={this.onChangeHandler} /><br></br><br></br>
                         <button onClick={this.saveButtonPressed}>Save</button>
                     </form>
