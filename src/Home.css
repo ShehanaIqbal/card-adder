@@ -4,12 +4,27 @@
 }
 
 .addForm{
-    margin: 10px 100px;
+    margin:100px 50px;
+    width: 700px;
+    text-align: center;
 }
 
 .addButton{
-    margin: 10px 100px;
-    width:600px;
-    align-items: center;
+    width:700px;
+    text-align: center;
     height: 50px;
+}
+
+.inputField{
+    width: 500px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.pageContent{
+    margin:100px 100px;
+}
+
+.formLine{
+    margin:0px 0px 50px 0px;
 }

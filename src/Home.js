@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Navbar from './Navbar.js';
 import Card from './card.js';
 import './Home.css';
-import { Button } from 'reactstrap';
+import {Button,TextField} from '@material-ui/core';
 //import IdGenerator from 'react-id-generator';
 //import AddButton from './add_button.js';
 import firebase from 'firebase';
@@ -99,18 +99,25 @@ class Home extends Component{
             <div>
                 <Navbar></Navbar>
                 <br></br>
-                <br></br>
-                <h2 className='homeTitle'>Welcome to the card adder</h2><br></br>
-                <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button>
-                <div  className='addForm' hidden={this.state.isHidden}>
-                    <form onSubmit={this.onSubmitForm}>
-                        <input placeholder='title' label='Title' name='title' onChange={this.onChangeHandler} /><br></br><br></br>
-                        <TextField id="outlined-basic" label="Title" variant="outlined" />
-                        <input placeholder='content' label='Content' name='content' onChange={this.onChangeHandler} /><br></br><br></br>
-                        <button onClick={this.saveButtonPressed}>Save</button>
-                    </form>
-                </div>
-                {this.state.cards}
+                
+                    <div className="pageContent">
+                    <h2 className='homeTitle'>Welcome to the card adder</h2><br></br>
+                    <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button><br></br>
+                    <div  className='addForm' hidden={this.state.isHidden}>
+                        <form className='form' onSubmit={this.onSubmitForm}>
+                            <div className='formLine'>
+                            <TextField className='inputField' id="title" name='title' onChange={this.onChangeHandler} label="Title" variant="outlined" />
+                            </div>
+                            <div className='formLine'>
+                            <TextField className='inputField' id="content" name="content" onChange={this.onChangeHandler} label="Content" variant="outlined" />
+                            </div>
+                            <div className='formSubmit'>
+                            <Button onClick={this.saveButtonPressed}>Save</Button>
+                            </div>
+                        </form>
+                    </div>
+                    {this.state.cards}
+                    </div>
                 </div>
         )
     }
