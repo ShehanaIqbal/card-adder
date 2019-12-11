@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/' component={Home} exact/>
         <Route path='/login' component={Login} exact/>
+        <Route path='/' component={Home} exact/>
         <Redirect from='/' to='/'/>
       </Switch>
     </BrowserRouter>
