@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 11 2019 14:29:08 GMT+0530 (India Standard Time)
+------------------------------------------------------
+
+Modified files:
+* package.json
+* src/Home.css
+* src/Home.js
+* yarn.lock
+
+
+Created files:
+* .autogit/logs/log-11-11-2019-12-30-53.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -102,7 +102,9 @@ class Home extends Component{
                 
                     <div className="pageContent">
                     <h2 className='homeTitle'>Welcome to the card adder</h2><br></br>
-                    <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button><br></br>
+                    <div className='addBtnSection' >
+                        <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button><br></br>
+                    </div>
                     <div  className='addForm' hidden={this.state.isHidden}>
                         <form className='form' onSubmit={this.onSubmitForm}>
                             <div className='formLine'>
