@@ -24,13 +24,31 @@ class Home extends Component{
         return ret.substring(0,length);
     }
 
+    deleteThisCard=(id)=>{
+        console.log(id);
+        let cardSet=this.state.cards.filter(card=>{
+            return(
+                card.id!==id
+            )
+            })
+            this.setState({
+                cards:cardSet
+                
+        })
+    }
+
     componentDidMount=()=>{
         
         firebase.database().ref("card").on("value", snapshot => {
             if(snapshot && snapshot.exists()){
                 let cardSet=[]
                 snapshot.forEach(item=>{
-                    var temp=<Card title={item.val().title} content={item.val().content} deleteCard={this.deleteCard(item.val().id)} id={item.val().id}></Card>
+                    var temp=<Card 
+                        title={item.val().title} 
+                        content={item.val().content} 
+                        deleteCard={()=>{this.deleteThisCard(item.val().id)} }
+                        id={item.val().id}>
+                        </Card>
                     cardSet.push(temp)
                 })
                 this.setState({
@@ -41,10 +59,6 @@ class Home extends Component{
             }
         })
         }
-
-    deleteCard=(id)=>{
-        console.l
-    }
 
     onChangeHandler=(e)=>{
         this.setState({
