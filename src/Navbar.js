@@ -11,14 +11,14 @@ import {
   DropdownItem,
 } from 'reactstrap';
 
-const NavigationBar = (props) => {
+const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar light expand="md">
         <NavbarBrand href="/">CARD ADDER</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

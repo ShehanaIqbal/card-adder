@@ -7,6 +7,12 @@
     margin:100px 50px;
     width: 700px;
     text-align: center;
+    display: inline-block;
+    background-color: #45A29E;
+    border-radius: 8px;
+    padding-top: 50px;
+    border:2px solid black;
+    padding-bottom: 50px;
 }
 
 .addButton{
@@ -18,7 +24,6 @@
 .inputField{
     width: 500px;
     padding: 0px;
-    display: inline-block;
 }
 
 .pageContent{
@@ -33,11 +38,19 @@
 
 
 .formLine{
-    margin:0px 0px 50px 0px;
+    margin-bottom:50px;
 }
 .nav-bar{
     width: 100%;
+    background-color: #367c7a;
 }
 .addBtnSection{
     margin-bottom: 30px;
+}
+
+.jumbotron{
+    background-color: #367c7a;
+    width:fit-content;
+    padding: 10px;
+    text-align: center;
 }
