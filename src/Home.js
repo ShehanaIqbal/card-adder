@@ -52,7 +52,7 @@ class Home extends Component{
                     cardSet.push(temp)
                 })
                 this.setState({
-                    cards: cardSet
+                    cards:cardSet
                 })
             }else{
                 console.log('snapshot does not exist');
