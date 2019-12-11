@@ -26,20 +26,12 @@ class Home extends Component{
 
     deleteThisCard=(id)=>{
         console.log(id);
-        let cardSet=this.state.cards.filter(card=>{
-            return(
-                card.id!==id
-            )
-            })
-            this.setState({
-                cards:cardSet
-            })
-            firebase.database().ref("card").update({
-                [id]:{
-                    ...this.state.cards[id],
-                    isDeleted:true
-                }
-            })
+        firebase.database().ref("card").update({
+            [id]:{
+                ...this.state.cards[id],
+                isDeleted:true
+            }
+       })
     }
 
     componentDidMount=()=>{
@@ -55,7 +47,9 @@ class Home extends Component{
                         id={item.val().id}
                         isDeleted={item.val().isDeleted}>
                         </Card>
-                    cardSet.push(temp)
+                    if (item.isDeleted!==true){
+                        cardSet.push(temp)
+                    }
                 })
                 this.setState({
                     cards:cardSet
@@ -95,6 +89,7 @@ class Home extends Component{
             title:this.state.title,
             content: this.state.content,
             id:id_number,
+            isDeleted:false,
         })
     }
 
