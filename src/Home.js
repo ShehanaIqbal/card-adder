@@ -27,14 +27,12 @@ class Home extends Component{
     componentDidMount=()=>{
         
         firebase.database().ref("card").on("value", snapshot => {
-            console.log(snapshot.val())
             if(snapshot && snapshot.exists()){
                 let cardSet=[]
                 snapshot.forEach(item=>{
                     var temp=<Card title={item.val().title} content={item.val().content} id={item.val().id}></Card>
                     cardSet.push(temp)
                 })
-                console.log(cardSet)
                 this.setState({
                     cards: cardSet
                 })

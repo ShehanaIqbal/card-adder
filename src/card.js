@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import './card.css';
 const NewCard = (props) => {
+
   return (
     <div>
     <Row>
@@ -9,7 +10,7 @@ const NewCard = (props) => {
         <Card body>
   <CardTitle className='cardTitle'>{props.title}</CardTitle>
   <CardText>{props.content}</CardText>
-          <Button>Delete this card</Button>
+          <button >Delete this card</button>
         </Card>
       </Col>
     </Row>
