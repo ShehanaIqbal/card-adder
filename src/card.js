@@ -7,10 +7,10 @@ const NewCard = (props) => {
     <div>
     <Row>
       <Col sm="6">
-        <Card body>
+        <Card className='card' body>
           <CardTitle className='cardTitle'>{props.title}</CardTitle>
           <CardText>{props.content}</CardText>
-          <Button onClick={props.deleteCard}>Delete this card</Button>
+          <Button className='saveBTN' onClick={props.deleteCard}>Delete this card</Button>
         </Card>
       </Col>
     </Row>

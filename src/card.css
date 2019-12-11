@@ -3,3 +3,18 @@
     font-weight: bolder;
     font-size: large;
 }
+
+.card{
+    background-color: #367c7a;
+    
+}
+
+.saveBTN{
+    background-color: #e6f7ff
+    ;
+    color: black;
+}
+
+.saveBTN:hover{
+    background-color: #4dc3ff;
+}

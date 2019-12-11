@@ -22,13 +22,22 @@
 }
 
 .pageContent{
-    margin:100px 100px;
+    background-color:#95d0ce;
+    width:100%;
+    height: 100%;
 }
+
+.content{
+    padding:100px 100px;
+}
+
 
 .formLine{
     margin:0px 0px 50px 0px;
 }
-
+.nav-bar{
+    width: 100%;
+}
 .addBtnSection{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }

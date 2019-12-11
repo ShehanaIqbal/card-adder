@@ -96,11 +96,12 @@ class Home extends Component{
 
     render(){
         return(
-            <div>
-                <Navbar></Navbar>
-                <br></br>
-                
-                    <div className="pageContent">
+            <div className="pageContent">
+                    <div className='nav-bar'>
+                    <Navbar></Navbar>
+                    </div>
+                    <br></br>                
+                    <div className='content'>
                     <h2 className='homeTitle'>Welcome to the card adder</h2><br></br>
                     <div className='addBtnSection' >
                         <Button className='addButton' color="primary" onClick={this.buttonClicked} size="lg" block>Add New Card</Button><br></br>
