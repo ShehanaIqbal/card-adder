@@ -33,8 +33,13 @@ class Home extends Component{
             })
             this.setState({
                 cards:cardSet
-                
-        })
+            })
+            firebase.database().ref("card").update({
+                [id]:{
+                    ...this.state.cards[id],
+                    isDeleted:true
+                }
+            })
     }
 
     componentDidMount=()=>{
@@ -47,7 +52,8 @@ class Home extends Component{
                         title={item.val().title} 
                         content={item.val().content} 
                         deleteCard={()=>{this.deleteThisCard(item.val().id)} }
-                        id={item.val().id}>
+                        id={item.val().id}
+                        isDeleted={item.val().isDeleted}>
                         </Card>
                     cardSet.push(temp)
                 })

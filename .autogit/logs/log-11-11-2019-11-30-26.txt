@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 11 2019 11:30:26 GMT+0530 (India Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/Home.js
+
+
+Created files:
+* .autogit/logs/log-11-11-2019-11-25-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
